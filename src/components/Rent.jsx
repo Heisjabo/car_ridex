@@ -30,7 +30,7 @@ const Rent = () => {
   };
   return (
     <Layout>
-      <div className='px-[10%]'>
+      <div className='px-[5%]'>
         <h1 className='text-4xl text-center font-semibold text-slate-700 pt-6 '>Our rental fleet</h1>
         <h1 className='text-center font-semibold text-slate-500 text-xl pt-8'>To contribute to positive change and achieve our sustainability</h1>
         <h1 className='text-center font-semibold text-slate-500 text-xl'>goals with many extraordinary</h1>

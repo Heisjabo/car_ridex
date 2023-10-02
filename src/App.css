@@ -16,7 +16,9 @@ ul li:hover ul {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  
 }
+
 
 @media(max-width:768px) {
   .home {

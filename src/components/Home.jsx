@@ -31,19 +31,19 @@ const Home = (props) => {
         }
     };
     return (
-      <Layout>
-        <div className="home h-screen"></div>
-        <div className=" bg-slate-600/60 pl-10 pt-[15%] w-full h-screen absolute top-0 ">
-          <div className="flex items-start flex-col md:pl-28 gap-4">
-            <h1 className="text-2xl md:text-4xl font-semibold text-slate-300 mt-14">
-              THE EASY WAY TO TAKE TO<br></br>TAKEOVER A LEASE<br></br>TRUSTED
-              PROCESS
-            </h1>
-            <button className="px-10 py-5 bg-slate-400 text-l md:text-xl mt-6 rounded-2xl font-bold text-gray-50">
-              Get Started &#8594;
-            </button>
+      <Layout className="relative">
+        <div className="home h-screen bg-cover bg-center relative flex items-center justify-center">
+         <div className="bg-opacity-60 bg-black absolute inset-0"></div>
+        <div className="text-slate-200 flex flex-col items-center text-center relative z-10 gap-6">
+          <h1 className="text-2xl md:text-4xl w-[80%] lg:w-[50%] text-center lg:text-5xl font-semibold mb-4">
+           THE EASY WAY TO TAKEOVER A LEASE
+           </h1>
+          <button className="px-6 py-3 text-base md:text-lg lg:text-xl bg-gray-600 hover:bg-gray-700 text-white rounded-[8px] font-bold">
+          Get Started &#8594;
+          </button>
           </div>
         </div>
+
         <div className="px-[7%]">
           <div className="flex justify-between mt-10">
             <h1 className="text-4xl text-slate-950">Featured cars</h1>
