@@ -1,0 +1,28 @@
+ul li ul {
+  display: none;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+.active{
+  background-color: rgb(238, 238, 238);
+  border-right: 4px solid rgb(123, 123, 207);
+}
+
+.home {
+  background-image: url(./components/Images/joey-banks-YApiWyp0lqo-unsplash.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+@media(max-width:768px) {
+  .home {
+    background-image: url(./components/Images/wallpaper.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+  }
+}
