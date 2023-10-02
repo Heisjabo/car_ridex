@@ -6,7 +6,7 @@ import { IoMail } from 'react-icons/io5';
 const Footer = () => {
     return (
         <div className='bg-slate-300 px-[7%]'>
-            <div className=' pt-[50px] flex justify-start gap-[14%]'>
+            <div className='pt-[50px] flex flex-col md:flex-row gap-4 justify-start md:gap-[14%]'>
                 <div>
                     <h1 className=' font-semibold text-slate-900 text-3xl'>Ridex</h1>
                     <h1 className='mt-[20px] text-gray-500 font-normal'>Search for cheap rental cars in New York.<br></br> With a diverse fleet of 19,000 vehicles,<br></br> Waydex offers its consumers an attractive<br></br> and fun selection.</h1>
@@ -26,14 +26,14 @@ const Footer = () => {
                     <Link path='/' element={<Home />} className='text-gray-500 font-normal'>Tearms and conditions</Link>
                 </div>
             </div>
-            <div className='mt-[40px] w-full flex justify-between px-[5%] rounded-t-3xl h-[70px] py-8 bg-slate-200'>
+            <div className='mt-[40px] w-full flex justify-between px-[5%] gap-4 flex-col items-center md:flex-row rounded-t-3xl h-[100%] md:h-[70px] py-4 bg-slate-200'>
                 <p>&copy; 2023 All Rights Reserved</p>
                 <div className='flex gap-8'>
-                    <FaFacebook className='text-blue-950 text-3xl h-6 w-6' />
-                    <FaInstagram className='text-blue-950 text-3xl h-6 w-6' />
-                    <FaSkype className='text-blue-950 text-3xl h-6 w-6' />
-                    <FaTwitter className='text-blue-950 text-3xl h-6 w-6' />
-                    <IoMail className='text-blue-950 text-3xl h-6 w-6' />
+                    <FaFacebook className='text-blue-950 text-xl h-6 w-6' />
+                    <FaInstagram className='text-blue-950 text-xl h-6 w-6' />
+                    <FaSkype className='text-blue-950 text-xl h-6 w-6' />
+                    <FaTwitter className='text-blue-950 text-xl h-6 w-6' />
+                    <IoMail className='text-blue-950 text-xl h-6 w-6' />
                 </div>
             </div>
         </div>

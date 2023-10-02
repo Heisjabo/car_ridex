@@ -32,20 +32,14 @@ const Home = (props) => {
     };
     return (
       <Layout>
-        {/* <div className='flex gap-[20%]'>
-                <div className='pt-[15%] pl-[13%]'>
-                    <h1 className='  text-slate-950 text-[35px] font-semibold'>THE EASY WAY TO <br></br> TAKEOVER A LEASE</h1>
-                </div>
-                <img src={car1} className='h-[42%] w-[44%] rounded-3xl mt-[2%]'></img>
-            </div> */}
         <div className="home h-screen"></div>
         <div className=" bg-slate-600/60 pl-10 pt-[15%] w-full h-screen absolute top-0 ">
-          <div className="flex items-start flex-col px-20">
-            <h1 className="text-4xl font-semibold text-slate-300 mt-14">
+          <div className="flex items-start flex-col md:pl-28 gap-4">
+            <h1 className="text-2xl md:text-4xl font-semibold text-slate-300 mt-14">
               THE EASY WAY TO TAKE TO<br></br>TAKEOVER A LEASE<br></br>TRUSTED
               PROCESS
             </h1>
-            <button className="px-10 py-5 bg-slate-400 text-xl mt-6 rounded-2xl font-bold text-gray-50">
+            <button className="px-10 py-5 bg-slate-400 text-l md:text-xl mt-6 rounded-2xl font-bold text-gray-50">
               Get Started &#8594;
             </button>
           </div>
