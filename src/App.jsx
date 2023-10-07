@@ -6,9 +6,10 @@ import Carsales from './components/Carsales';
 import DashHome from "./dashboard/DashHome";
 import Cars from "./dashboard/Cars";
 import SharedLayout from "./dashboard/SharedLayout";
-import SpareParts from './components/spareParts';
+import SpareParts from './components/SpareParts';
 import ContactUs from './components/ContactUs';
 import SinglePart from './components/SinglePart';
+import SmoothScroll from "./helpers/SmoothScroll";
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
         <Route path="/carsales" element={<Carsales />}></Route>
         <Route path='/spare-parts/:partId' element={<SinglePart/>}></Route>
       </Routes>
+      <SmoothScroll />
       </div>
     </>
   )
