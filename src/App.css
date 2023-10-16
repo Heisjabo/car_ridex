@@ -7,8 +7,14 @@ ul li:hover ul {
 }
 
 .active{
-  background-color: rgb(238, 238, 238);
-  border-right: 4px solid rgb(123, 123, 207);
+  background-color:#263238;
+  border-radius: 8px;
+  color: white;
+  /* border-right: 4px solid rgb(123, 123, 207); */
+}
+
+.active:hover{
+  background-color: #263238 !important;
 }
 
 .home {
