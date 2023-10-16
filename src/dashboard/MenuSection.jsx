@@ -5,7 +5,7 @@ import { FiUsers } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 const MenuSection = () => {
   return (
-    <div className="lg:flex hidden fixed flex-col rounded-xl px-2 bg-white translate-x-0 inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 transition-transform duration-300 xl:translate-x-0">
+    <div className="lg:flex hidden fixed flex-col rounded-xl px-2 bg-white translate-x-0 inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-[22%] transition-transform duration-300 xl:translate-x-0">
       <div className="flex items-center justify-center w-full border-b border-slate-500">
         <h1 className="text-2xl py-8 text-slate-700 font-bold md:2xl cursor-pointer">GAGA</h1>
       </div>

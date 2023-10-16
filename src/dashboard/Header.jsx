@@ -4,7 +4,7 @@ import { IoSettingsSharp, IoNotificationsSharp} from "react-icons/io5";
 const Header = () => {
   return (
     <div className="flex backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border 
-    border-white/80 lg:ml-[25%] items-center w-[100%] lg:w-[74%] 
+    border-white/80 items-center w-[100%]
     justify-between rounded-xl py-2 px-4 bg-white
     shadow-md transition-all sticky top-4 z-40 shadow-blue-gray-500/5 ">
       <div className="flex flex-col gap-2">

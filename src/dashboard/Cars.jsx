@@ -101,7 +101,7 @@ const Cars = () => {
   /* eslint-disable */
   return (
     <section>
-      <div className="ml-[25%] mt-6 w-[74%] rounded-xl ">
+      <div className="mt-6 w-full rounded-xl ">
         <div className="flex items-center justify-between rounded-xl py-2 px-4 w-full mx-auto">
         <h2 className="text-xl font-semibold text-slate-700">All cars</h2>
         <button className="border rounded-lg px-4 py-1 border-slate-800 cursor-pointer bg-slate-800 text-white hover:bg-transparent hover:text-slate-800 transition-all duration-300"

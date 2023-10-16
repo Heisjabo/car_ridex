@@ -61,11 +61,11 @@ const statisticCards = [
 
 const DashHome = () => {
   return (
-    <div className="flex flex-col h-full lg:ml-[25%] mt-8 bg-[#eceff1] w-full lg:w-[74%] ">
-      <h1 className="font-[500] user-select-none text-3xl ml-8 text-slate-800">Overview</h1>
-      <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col h-full mt-8 w-full">
+      <h1 className="font-[500] user-select-none text-3xl text-slate-800">Overview</h1>
+      <div className="flex flex-col md:flex-row gap-2">
         {statisticCards.map((card, index) => (
-          <div key={index} className="md:w-1/2 lg:w-1/4 p-4">
+          <div key={index} className="md:w-1/2 lg:w-1/4 py-4">
             <div className="bg-[#fff] rounded-lg p-4 shadow-md w-full">
               <h2 className="text-lg font-semibold text-slate-700">{card.title}</h2>
               <div className="flex items-center justify-between mt-2">
@@ -79,12 +79,12 @@ const DashHome = () => {
         ))}
       </div>
 
-        <div className="w-full md:w-1/2 lg:w-full  p-4 flex gap-2">
+        <div className="w-full md:w-1/2 lg:w-full flex gap-2">
           <div className="bg-white rounded-lg p-4 shadow-md w-1/2">
             <h2 className="text-lg font-semibold text-slate-700">Monthly Sales</h2>
             <Line data={data} />
           </div>
-          <div className='bg-white rounded-xl flex flex-col py-2 px-4 w-1/2 h-[45vh]'>
+          <div className='bg-white rounded-xl flex flex-col py-2 px-4 w-1/2 h-[47vh]'>
             <h2 className='text-slate-700 font-semibold text-lg pb-3'>Recent orders</h2>
             <div className='flex flex-col gap-2 overflow-y-scroll'>
               <div className='flex items-center gap-2 w-full justify-between'>
