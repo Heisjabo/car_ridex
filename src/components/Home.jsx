@@ -10,6 +10,7 @@ import Blog3 from './Images/blog-3.jpg'
 import Blog4 from './Images/blog-4.jpg'
 import Blog5 from './Images/blog-5.jpg'
 import Cards from './Cards';
+import CarSkeletonLoader from './CarSkeletonLoader';
 const Home = (props) => {
     const responsive = {
         superLargeDesktop: {
@@ -52,8 +53,8 @@ const Home = (props) => {
               <AiOutlineArrowRight className="text-blue-400 text-xl" />
             </div>
           </div>
-          {/* {props.children} */}
           <Cards />
+          
           <div>
             <h1 className="text-3xl my-[30px] text-slate-700">
               Get started with 4 simple steps

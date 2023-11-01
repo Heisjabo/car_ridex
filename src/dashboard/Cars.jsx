@@ -1,117 +1,30 @@
-import car1 from "../components/Images/car-1.jpg";
 import { useState } from "react";
-import { IoCloseSharp } from "react-icons/io5";
-import { useForm } from "react-hook-form";
+import { useContext } from "react";
 import {
-  FaCar,
-  FaCog,
   FaPen,
   FaTrashAlt,
 } from "react-icons/fa";
+import { AppContext } from "../context/AppProvider";
 
 const Cars = () => {
   const [modal, setModal] = useState(false);
+  const { cars } = useContext(AppContext);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({});
-
-  const onSubmit = async (data) => {
-    console.log(data);
-
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("year", data.year);
-    formData.append("mode", data.mode);
-    formData.append("profile", data.profile[0]);
-
-    console.log(formData);
-  }
-
-  const data = [
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    },
-    {
-      name: "BMW 3 Series",
-      year: 2019,
-      seats: "4 people",
-      fuelConsumption: "8.2km/1-litre",
-      fuelType: "Gasoline",
-      gear: "Automatic",
-      price: "$350/month",
-    }
-    // Add more car details as needed
-  ];
 
   /* eslint-disable */
   return (
     <section>
       <div className="mt-6 w-full rounded-xl ">
-        <div className="flex items-center justify-between rounded-xl py-2 px-4 w-full mx-auto">
-        <h2 className="text-xl font-semibold text-slate-700">All cars</h2>
-        <button className="border rounded-lg px-4 py-1 border-slate-800 cursor-pointer bg-slate-800 text-white hover:bg-transparent hover:text-slate-800 transition-all duration-300"
+        <div className="flex items-center justify-between rounded-xl py-4 px-4 w-full mt-4 mx-auto bg-gradient-to-tr from-indigo-400 to-red-400 text-white">
+        <h2 className="text-xl font-semibold">All cars</h2>
+        <button className="border rounded-lg px-4 py-1 border-none cursor-pointer bg-indigo-500 text-white hover:bg-indigo-600 transition-all duration-300"
         onClick={() => setModal(true)}>Add New</button>
         </div>
     {/* table of cars */}
     <div className="container mx-auto mt-4 bg-white rounded-xl mb-4 py-4">
         <table className="table-auto w-full">
             <thead>
-                <tr className="text-gray-400 text-[14px]">
+                <tr className="text-indigo-600 font-semibold text-[14px]">
                     <th className="px-4 py-2 text-left font-semibold">CAR</th>
                     <th className="px-4 py-2 text-left font-semibold">MODE</th>
                     <th className="px-4 py-2 text-left font-semibold">PRICE</th>
@@ -122,44 +35,32 @@ const Cars = () => {
             <tbody>
 
               {
-                data.map((item, index) => {
+                cars.map((item, index) => {
                   return (
-                    <tr>
-                    <td className="border-t border-b px-4 py-2">
+                    <tr className="bg-white rounded-xl ">
+                    <td className="border-t border-b px-2 py-2 border-r ">
                       <div className="flex items-center gap-4">
-                        <img src={car1} alt="" className="rounded-[5px] h-[40px] w-[40px]"/>
+                        <img src={item.images[0]} alt="" className="rounded-[5px] h-[40px] w-[40px]"/>
                         <div className="block leading-5">
                           <h3 className="font-semibold text-slate-800">{item.name}</h3>
                           <p className="text-gray-500">{item.year}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="border-t border-b px-4 py-2 text-slate-800 font-normal">{item.gear}</td>
-                    <td className="border-t border-b px-4 py-2 text-slate-800 font-normal">$140</td>
-                    <td className="border-t border-b px-4 py-2"><p className="bg-[#2196f3] rounded-lg text-white w-1/2 text-sm text-center px-2">Available</p></td>
-                    <td className="border-t border-b px-4 py-2">
-                      <div className="flex items-center w-full gap-6">
+                    <td className="border-t border-b px-4 py-2 text-slate-800 font-normal border-r">{item.gearType}</td>
+                    <td className="border-t border-b px-4 py-2 text-slate-800 font-normal border-r">{item.price}</td>
+                    <td className="border-t border-b px-4 py-2 border-r text-indigo-500">Available</td>
+                    <td className="border-t border-b px-4 py-2 border-r">
                         <FaPen className="text-blue-600 cursor-pointer " />
-                        <FaTrashAlt className="text-red-600 cursor-pointer" />
-                      </div>
-                      
+                      </td>
+                    <td className="border-t border-b px-4 py-2 border-r">
+                    <FaTrashAlt className="text-red-600 cursor-pointer" />
                       </td>
                 </tr>
                   )
                 })
               }
                 
-                {/* <tr>
-                    <td className="border-t border-b px-4 py-2">Car 2</td>
-                    <td className="border-t border-b px-4 py-2 text-slate-800 font-normal">Manual</td>
-                    <td className="border-t border-b px-4 py-2"><p className="bg-[#455a64] text-white w-1/2 rounded-lg text-sm text-center">Taken</p></td>
-                    <td className="border-t border-b px-4 py-2">
-                    <div className="flex items-center w-full gap-6">
-                        <FaPen className="text-blue-600 cursor-pointer " />
-                        <FaTrashAlt className="text-red-600 cursor-pointer" />
-                      </div>
-                    </td>
-                </tr> */}
             </tbody>
         </table>
     </div>
@@ -172,69 +73,92 @@ const Cars = () => {
           modal ? "" : "hidden"
         } z-[1000] w-full h-full `}
       >
+        <button className="absolute right-6 top-6 text-md font-normal text-blue-600 bg-white rounded-md p-2" onClick={() => setModal(false)}> &#10006;</button>
         <div className="absolute bg-white w-[50%] p-5 rounded-[5px] top-[50%] left-[50%] max-h-[90%] transform -translate-x-[50%]  -translate-y-[50%]">
-          <div className="flex flex-col relative px-[10px]">
-            <h3 className="text-[20px] font-[500] text-slate-800">
-              Add a car
-            </h3>
-            <div
-              className="absolute top-2 right-2 cursor-pointer"
-              onClick={() => setModal(false)}
-            >
-              <IoCloseSharp className="text-2xl " />
-            </div>
-            <form className="mt-8 flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)}>
-              <div className="flex items-start gap-[5px] w-full flex-col">
-                <label className="text-slate-800 font-[500] text-[16px]">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  {...register("name")}
-                  className={`bg-[#f3f1f1] w-full px-[8px] py-[5px] text-slate-800 outline-none rounded-[8px]`}
-                />
-              </div>
-              <div className="flex items-start gap-[5px] w-full flex-col">
-                <label className="text-slate-800 font-[500] text-[16px]">
-                  Year
-                </label>
-                <input
-                  type="number"
-                  {...register("year")}
-                  className={`bg-[#f3f1f1] w-full px-[8px] py-[5px] text-slate-800 outline-none rounded-[8px]`}
-                />
-              </div>
-              <div className="flex items-start gap-[5px] w-full flex-col">
-                <label className="text-slate-800 font-[500] text-[16px]">
-                  Mode
-                </label>
-                <select
-                {...register("mode")}
-                  className={`bg-[#f3f1f1] w-full px-[8px] py-[5px] text-slate-800 outline-none rounded-[8px]`}
-                >
-                  <option value="0"></option>
-                  <option>Manual</option>
-                  <option>Automatic</option>
-                </select>
-              </div>
-              <div className="flex items-start gap-[5px] w-full flex-col">
-                <label className="text-slate-800 font-[500] text-[16px]">
-                  Image
-                </label>
-                <input
-                  type="file"
-                  {...register("profile")}
-                  className={`bg-[#f3f1f1] w-full px-[8px] py-[5px] text-slate-800 outline-none rounded-[8px]`}
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-slate-800 text-white py-[5px] w-[50%] rounded-[8px]"
-              >
-                submit
-              </button>
-            </form>
-          </div>
+        <div className="max-w-full mx-auto px-4">
+      <h2 className="text-2xl font-semibold mb-6">Add a New Car</h2>
+      <form className="grid grid-cols-2 gap-x-8 w-full">
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Car Name</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="text"
+            name="name"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Year</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="text"
+            name="year"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Number of Seats</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="number"
+            name="seats"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Fuel Consumption (mpg)</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="text"
+            name="fuelConsumption"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Fuel Type</label>
+          <select
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            name="fuelType"
+          >
+            <option value="">Select Fuel Type</option>
+            <option value="Gasoline">Gasoline</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Gear Type</label>
+          <select
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            name="gearType"
+          >
+            <option value="">Select Gear Type</option>
+            <option value="Automatic">Automatic</option>
+            <option value="Manual">Manual</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Price per Day ($)</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="number"
+            name="price"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Upload Images (up to 5)</label>
+          <input
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            type="file"
+            name="images"
+            accept="image/*"
+            multiple
+          />
+        </div>
+        <button
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg"
+          type="button"
+        > 
+          Submit
+        </button>
+      </form>
+    </div>
         </div>
       </div>
     </section>

@@ -103,14 +103,14 @@ const SpareParts = () => {
               </span>
             </div>
             </div>
-            <button
+            {/* <button
                 className="bg-slate-800 text-white py-2 px-2 rounded hover:bg-slate-600 transition duration-300"
-                onClick={openModal}>Order Custom Part</button>
+                onClick={openModal}>Order Custom Part</button> */}
             </div> 
         </div>
 
         {/* Display filtered spare parts */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
           {filteredSpareParts.map((sparePart) => (
             <div
               key={sparePart.id}
