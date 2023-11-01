@@ -110,20 +110,20 @@ const SpareParts = () => {
         </div>
 
         {/* Display filtered spare parts */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
+        <div className="grid gap-10 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid lg:gap-10 md:gap-6 mt-8">
           {filteredSpareParts.map((sparePart) => (
             <div
               key={sparePart.id}
-              className="bg-white p-2 shadow-md hover:shadow-lg transition duration-300 rounded-lg"
+              className="bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl"
             >
               <div className=''>
-                <img src={sparePart.image} alt="" className=' rounded-lg w-full'/>
-                <div className='py-2'>
+                <img src={sparePart.image} alt="" className=' rounded-3xl px-3 pt-3 w-full h-[300px] object-cover'/>
+                <div className='py-2 px-3'>
                     <h3 className='text-slate-900 text-md font-[500]'>{sparePart.name}</h3>
                     <p className='text-blue-600 text-md'>Brand: <span className='text-slate-800'> {sparePart.brand}</span></p>
                     <p className='text-blue-600 text-md'>In stock: <span className='text-slate-800'> 10 pierces</span></p>
                 </div>
-                <div className='flex justify-between border-t border-slate-600 py-2'>
+                <div className='flex justify-between border-t border-slate-600 py-2 px-3'>
                 <p className='text-blue-600 text-md'>Price: <span className='text-slate-800'>${sparePart.price}</span></p>
                 <Link to={`${sparePart.id}`}><button className='rounded-[5px] bg-transparent text-blue-600'>shop now</button></Link>
                 </div>

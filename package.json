@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "axios": "^1.5.1",
     "chart.js": "^4.4.0",
     "notiflix": "^3.2.6",
