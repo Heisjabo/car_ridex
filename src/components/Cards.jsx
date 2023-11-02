@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { AppContext } from '../context/AppProvider';
 import CarSkeletonLoader from './CarSkeletonLoader'; // Import the skeleton loader
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const Cards = () => {
         cars.map((item, index) => {
           return (
             <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl' key={index}>
-              <img src={item.images[0]} className='rounded-3xl px-3 pt-3 w-full h-[300px] object-cover'></img>
+              <Link to={`${item._id}`}><img src={item.images[0]} className='rounded-3xl px-3 pt-3 w-full h-[300px] object-cover'></img></Link>
               <div className='px-6'>
                 <div className='flex justify-between mt-5'>
                   <h1 className='md:text-lg lg:text-2xl'>{item.name}</h1>
