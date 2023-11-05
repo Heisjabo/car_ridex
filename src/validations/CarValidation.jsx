@@ -8,6 +8,7 @@ export const carSchema = yup.object().shape({
     fuelType: yup.string().required('Fuel type is required'),
     gearType: yup.string().required('Gear type is required'),
     price: yup.string().required('Price is required'),
+    category: yup.string().required('Category is required'),
     images: yup.mixed().test("required", "Car image is required", (value) => {
         return value && value.length;
       }),

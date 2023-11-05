@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Layout from './Layout';
-import spare from "./Images/spare.jpg";
+import Layout from '../components/Layout';
+import spare from "../assets/Images/spare.jpg";
 import { IoMdArrowDropdown } from 'react-icons/io';
-import CustomPartModal from './CustomPartModal';
+import CustomPartModal from '../components/CustomPartModal';
 import { Link } from 'react-router-dom';
 
 

@@ -3,7 +3,7 @@
 const CarSkeletonLoader = () => {
   return (<>
     <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl w-full'>
-      <div className='w-full h-[300px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
+      <div className='w-full h-[250px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
       <div className='px-6'>
         <div className='flex justify-between mt-5'>
           <h1 className='md:text-lg lg:text-2xl bg-gray-300 w-1/2 mb-2 animate-pulse p2 h-6'></h1>
@@ -27,7 +27,7 @@ const CarSkeletonLoader = () => {
             <h1 className='w-2/3 bg-gray-300 h-6 animate-pulse'></h1>
           </div>
         </div>
-        <div className='h-[2px] w-full mt-4 bg-gray-300 animate-pulse'></div>
+        <div className='h-[1px] w-full mt-4 bg-gray-300 animate-pulse'></div>
         <div className='flex justify-between mt-5'>
           <h1 className='text-xl text-slate-950 bg-gray-300 w-1/4 h-8 animate-pulse'></h1>
           <div className='flex gap-3'>
@@ -41,7 +41,7 @@ const CarSkeletonLoader = () => {
       </div>
     </div>
     <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl w-full'>
-      <div className='w-full h-[300px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
+      <div className='w-full h-[250px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
       <div className='px-6'>
         <div className='flex justify-between mt-5'>
           <h1 className='md:text-lg lg:text-2xl bg-gray-300 w-1/2 mb-2 animate-pulse p2 h-6'></h1>
@@ -65,7 +65,7 @@ const CarSkeletonLoader = () => {
             <h1 className='w-2/3 bg-gray-300 h-6 animate-pulse'></h1>
           </div>
         </div>
-        <div className='h-[2px] w-full mt-4 bg-gray-300 animate-pulse'></div>
+        <div className='h-[1px] w-full mt-4 bg-gray-300 animate-pulse'></div>
         <div className='flex justify-between mt-5'>
           <h1 className='text-xl text-slate-950 bg-gray-300 w-1/4 h-8 animate-pulse'></h1>
           <div className='flex gap-3'>
@@ -79,7 +79,7 @@ const CarSkeletonLoader = () => {
       </div>
     </div>
     <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl w-full'>
-      <div className='w-full h-[300px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
+      <div className='w-full h-[250px] bg-gray-300 mb-2 animate-pulse rounded-xl'></div>
       <div className='px-6'>
         <div className='flex justify-between mt-5'>
           <h1 className='md:text-lg lg:text-2xl bg-gray-300 w-1/2 mb-2 animate-pulse p2 h-6'></h1>
@@ -103,7 +103,7 @@ const CarSkeletonLoader = () => {
             <h1 className='w-2/3 bg-gray-300 h-6 animate-pulse'></h1>
           </div>
         </div>
-        <div className='h-[2px] w-full mt-4 bg-gray-300 animate-pulse'></div>
+        <div className='h-[1px] w-full mt-4 bg-gray-300 animate-pulse'></div>
         <div className='flex justify-between mt-5'>
           <h1 className='text-xl text-slate-950 bg-gray-300 w-1/4 h-8 animate-pulse'></h1>
           <div className='flex gap-3'>

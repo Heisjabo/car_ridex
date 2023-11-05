@@ -25,7 +25,7 @@ const Cards = () => {
         cars.map((item, index) => {
           return (
             <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl' key={index}>
-              <Link to={`${item._id}`}><img src={item.images[0]} className='rounded-3xl px-3 pt-3 w-full h-[300px] object-cover'></img></Link>
+              <Link to={`/${item._id}`}><img src={item.images[0]} className='rounded-3xl px-3 pt-3 w-full h-[250px] object-cover'></img></Link>
               <div className='px-6'>
                 <div className='flex justify-between mt-5'>
                   <h1 className='md:text-lg lg:text-2xl'>{item.name}</h1>
@@ -49,7 +49,7 @@ const Cards = () => {
                     <h1>{item.gearType}</h1>
                   </div>
                 </div>
-                <div className='h-[2px] w-full bg-slate-950 mt-4'></div>
+                <div className='h-[1px] w-full bg-slate-600 mt-4'></div>
                 <div className='flex justify-between mt-5'>
                   <h1 className='text-xl text-slate-950'>{item.price}</h1>
                   <div className='flex gap-3'>
@@ -57,7 +57,7 @@ const Cards = () => {
                       <FaHeart className='text-blue-400 font-normal' />
                     </div>
                     <button className='lg:rounded-2xl rounded-lg px-2 py-2 md:rounded-xl sm:rounded-lg bg-blue-400 lg:px-7 md:px-3 sm:px-3 sm:py-2 md:py-1 lg:py-2 font-semibold text-white'>
-                      {location.pathname == '/rent' ? 'Rent now' : 'Buy now'}
+                    <Link to={`/${item._id}`}>{location.pathname == '/rent' ? 'Rent now' : 'Buy now'}</Link>
                     </button>
                   </div>
                 </div>

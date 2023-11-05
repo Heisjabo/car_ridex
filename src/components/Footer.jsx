@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Home from './Home'
+import Home from '../pages/Home.jsx'
 import { FaFacebook, FaInstagram, FaTwitter, FaSkype } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5';
 const Footer = () => {

@@ -22,17 +22,18 @@ ul li:hover ul {
 }
 
 .home {
-  background-image: url(./components/Images/joey-banks-YApiWyp0lqo-unsplash.jpg);
+  background-image: url(./assets/Images/joey-banks-YApiWyp0lqo-unsplash.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  background-attachment: fixed;
   
 }
 
 
 @media(max-width:768px) {
   .home {
-    background-image: url(./components/Images/wallpaper.jpg);
+    background-image: url(./assets/Images/wallpaper.jpg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;

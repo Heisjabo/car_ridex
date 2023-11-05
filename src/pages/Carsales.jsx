@@ -1,13 +1,13 @@
 import React from 'react'
-import Layout from './Layout'
+import Layout from '../components/Layout.jsx'
 import Carousel from 'react-multi-carousel'
-import Car2 from './Images/car-2.jpg'
-import Car1 from './Images/car-1.jpg'
-import Car3 from './Images/car-3.jpg'
-import Car4 from './Images/car-4.jpg'
-import Car5 from './Images/car-5.jpg'
-import Car6 from './Images/car-6.jpg'
-import Cards from './Cards.jsx'
+// import Car2 from './Images/car-2.jpg'
+// import Car1 from './Images/car-1.jpg'
+// import Car3 from './Images/car-3.jpg'
+// import Car4 from './Images/car-4.jpg'
+// import Car5 from './Images/car-5.jpg'
+// import Car6 from './Images/car-6.jpg'
+import Cards from '../components/Cards.jsx'
 
 const Rent = () => {
     const responsive = {

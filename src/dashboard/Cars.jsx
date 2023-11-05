@@ -34,6 +34,7 @@ const Cars = () => {
   const [modal, setModal] = useState(false);
   const { cars } = useContext(AppContext);
   const [selected, setSelected] = useState(null);
+  console.log(cars);
 
 
   //   delete a car 
@@ -102,13 +103,12 @@ defaultValues: {
     fuelType: selected ? selected?.fuelType : "",
     gearType: selected ? selected?.gearType : "",
     price: selected ? selected?.price : "",
+    category: selected ? selected?.category: "",
     images: ""
   },
 });
 
 const onSubmit = async (data) => {
-console.log(data);
-console.log(errors)
 
 const formData = new FormData();
 formData.append("name", data.name);
@@ -118,11 +118,12 @@ formData.append("fuelType", data.fuelType);
 formData.append("gearType", data.gearType);
 formData.append("seats", data.seats);
 formData.append("price", data.price);
+formData.append("category", data.category);
 
 for (let i = 0; i < selectedImages.length; i++) {
     formData.append("images", selectedImages[i]);
   }
-
+console.log(formData.get("category"));
 
 try {
     setLoading(true);
@@ -220,7 +221,7 @@ try {
         } z-[1000] w-full h-full `}
       >
         <button className="absolute right-6 top-6 text-md font-normal text-blue-600 bg-white rounded-md p-2" onClick={() => setModal(false)}> &#10006;</button>
-        <div className="absolute bg-white w-[50%] p-5 rounded-[5px] top-[50%] left-[50%] max-h-[90%] transform -translate-x-[50%]  -translate-y-[50%]">
+        <div className="absolute bg-white w-[50%] p-5 py-4 rounded-[5px] top-[50%] left-[50%] max-h-[100%] transform -translate-x-[50%]  -translate-y-[50%]">
         <div className="max-w-full mx-auto px-4">
       <h2 className="text-2xl font-semibold mb-6">Add a New Car</h2>
       <form  onSubmit={handleSubmit(onSubmit)}>
@@ -272,7 +273,7 @@ try {
             <option value="Gasoline">Gasoline</option>
             <option value="Diesel">Diesel</option>
             <option value="Electric">Electric</option>
-            <option value="Electric">Hybrid</option>
+            <option value="Hybrid">Hybrid</option>
           </select>
         </div>
         <div className="mb-4">
@@ -316,16 +317,20 @@ try {
               )}
             />
         </div>
-       
-        <button
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg"
-          type="submit"
-        > 
-          {loading? 'Submitting...' : 'Submit'}
-        </button>
+        <div className="mb-4">
+          <label className="block text-gray-600 text-sm font-semibold mb-2">Category</label>
+          <select
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 outline-none focus:outline-none focus:border-indigo-500"
+            name="category"
+            {...register("category")}
+          >
+            <option value="">Select Category</option>
+            <option value="rent">Rent</option>
+            <option value="sale">Sale</option>
+          </select>
         </div>
         {fileNames.length > 0 && (
-            <div className="mb-4 mt-2">
+            <div className="mb-4 mt-2 row-span-3">
               <label className="block text-gray-600 text-sm font-semibold mb-2">
                 Selected Files:
               </label>
@@ -336,6 +341,14 @@ try {
               </ul>
             </div>
           )}
+          
+        </div>
+        <button
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg"
+          type="submit"
+        > 
+          {loading? 'Submitting...' : 'Submit'}
+        </button>
         </form>
         </div>
     </div>

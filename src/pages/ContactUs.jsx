@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiMail, FiPhone } from 'react-icons/fi'; 
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 const ContactUs = () => {
   return (

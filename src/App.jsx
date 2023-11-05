@@ -1,17 +1,16 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home.jsx';
-import Rent from './components/Rent';
-import Carsales from './components/Carsales';
+import Home from './pages/Home.jsx';
+import Rent from './pages/Rent';
+import Carsales from './pages/Carsales';
 import DashHome from "./dashboard/DashHome";
-// import Cars from "./dashboard/Cars";
 import { DashboardCars } from './dashboard/DashboardCars';
-import SpareParts from './components/SpareParts';
-import ContactUs from './components/ContactUs';
-import SinglePart from './components/SinglePart';
+import SpareParts from './pages/SpareParts';
+import ContactUs from './pages/ContactUs';
+import SinglePart from './pages/SinglePart';
 import SmoothScroll from "./helpers/SmoothScroll";
 import Index from "./dashboard/index";
-import SingleCar  from './components/SingleCar.jsx';
+import SingleCar  from './pages/SingleCar.jsx';
 
 function App() {
   

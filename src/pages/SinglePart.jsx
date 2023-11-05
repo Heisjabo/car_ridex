@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout';
+import Layout from '../components/Layout';
 import { useParams } from 'react-router-dom';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 
