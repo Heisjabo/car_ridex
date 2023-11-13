@@ -113,12 +113,12 @@ import Cards from "../components/Cards";
         </div>
     </div>
 
-    <div className="bg-slate-100 mt-10">
+    {/* <div className="bg-slate-100 mt-10">
         <div className="w-[80%] mx-auto py-4">
         <h1 className="font-bold text-slate-700 text-2xl mb-2">Other Cars for You...</h1>
         <Cards />
         </div> 
-    </div>
+    </div> */}
     
     </Layout>
   )

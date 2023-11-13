@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Layout from '../components/Layout.jsx'
 import Carousel from 'react-multi-carousel'
 // import Car2 from './Images/car-2.jpg'
@@ -8,8 +8,12 @@ import Carousel from 'react-multi-carousel'
 // import Car5 from './Images/car-5.jpg'
 // import Car6 from './Images/car-6.jpg'
 import Cards from '../components/Cards.jsx'
+import { AppContext } from '../context/AppProvider.jsx'
 
-const Rent = () => {
+const Carsales = () => {
+    const { cars } = useContext(AppContext);
+    const carsForSale = cars.filter((item) => item.category === "sale");
+    console.log(carsForSale);
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -43,10 +47,10 @@ const Rent = () => {
                     <div className='w-[80%] bg-slate-300  border-2 border-slate-100 shadow-xl cursor-pointer hover:bg-slate-400  shadow-gray-200 rounded-xl text-center font-semibold text-xl text-slate-700 py-5'>BMW 4 series</div>
                     <div className='w-[80%] bg-slate-300  border-2 border-slate-100 shadow-xl cursor-pointer hover:bg-slate-400  shadow-gray-200 rounded-xl text-center font-semibold text-xl text-slate-700 py-5'>Mercedes</div>
                 </Carousel>
-                <Cards />
+                <Cards cars={carsForSale} />
             </div>
         </Layout>
     )
 }
 
-export default Rent
+export default Carsales;

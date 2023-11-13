@@ -10,21 +10,21 @@ import { AppContext } from '../context/AppProvider';
 import CarSkeletonLoader from './CarSkeletonLoader'; // Import the skeleton loader
 import { Link } from 'react-router-dom';
 
-const Cards = () => {
+const Cards = ({cars}) => {
   const location = useLocation();
-  const { cars, error } = useContext(AppContext);
+  // const { cars } = useContext(AppContext);
 
-  if (error) {
-    // Display an error message if there's an error state
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   // Display an error message if there's an error state
+  //   return <div>Error: </div>;
+  // }
 
   return (
     <div className='grid gap-10 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid lg:gap-10 md:gap-6 mt-8'>
       {cars.length > 0 ? (
         cars.map((item, index) => {
           return (
-            <div className='h-fit pb-5 bg-slate-200 shadow-xl shadow-slate-300 border-2 border-white rounded-2xl' key={index}>
+            <div className='h-fit pb-5 bg-white shadow-xl shadow-slate-300 border-2 border-white rounded-2xl' key={index}>
               <Link to={`/${item._id}`}><img src={item.images[0]} className='rounded-3xl px-3 pt-3 w-full h-[250px] object-cover'></img></Link>
               <div className='px-6'>
                 <div className='flex justify-between mt-5'>

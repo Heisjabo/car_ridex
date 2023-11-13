@@ -30,6 +30,24 @@ ul li:hover ul {
   
 }
 
+.hero-text span{
+  display: block;
+  opacity: 0;
+  animation: reveal 0.5s forwards var(--d);
+  
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+  
+}
+
 
 @media(max-width:768px) {
   .home {

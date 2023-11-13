@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layout from "../components/Layout";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { FaUserPlus } from "react-icons/fa";
+import { FaUserPlus, FaWhatsapp } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Blog1 from "../assets/Images/blog-1.jpg";
@@ -11,10 +11,11 @@ import Blog4 from "../assets/Images/blog-4.jpg";
 import Blog5 from "../assets/Images/blog-5.jpg";
 import Cards from "../components/Cards.jsx";
 import { FiChevronDown } from 'react-icons/fi';
-import AnimatedText from "../components/AnimatedText.jsx";
+import { AppContext } from "../context/AppProvider.jsx";
 
 
 const Home = (props) => {
+  const { cars } = useContext(AppContext);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -39,10 +40,11 @@ const Home = (props) => {
       <div className="home h-[90vh] bg-cover bg-center relative flex items-center justify-center">
         <div className="bg-opacity-60 bg-black absolute inset-0"></div>
         <div className="text-slate-200 flex flex-col items-center text-center relative z-10 gap-6">
-          {/* <h1 className="text-2xl md:text-4xl w-[80%] lg:w-[50%] text-center lg:text-5xl font-semibold mb-4">
-            THE EASY WAY TO TAKEOVER A LEASE
-          </h1> */}
-          <AnimatedText text="THE EASY WAY TO TAKEOVER A LEASE"/>
+          <h1 className="hero-text text-2xl md:text-4xl text-center lg:text-5xl font-semibold mb-4">
+            <span style={{ "--d": "0s" }}>THE EASY WAY TO</span>
+            <span style={{ "--d": "0.1s" }}> TAKEOVER A</span>
+            <span style={{ "--d": "0.2s" }}> LEASE</span>
+          </h1>
           <button className="px-6 py-3 text-base md:text-lg lg:text-xl bg-gray-600 hover:bg-gray-700 text-white rounded-[8px] font-bold">
             Get Started &#8594;
           </button>
@@ -60,7 +62,7 @@ const Home = (props) => {
             <AiOutlineArrowRight className="text-blue-400 text-xl" />
           </div>
         </div>
-        <Cards />
+        <Cards cars={cars}/>
 
         <div>
           <h1 className="text-3xl my-[30px] text-slate-700 text-center">
@@ -182,6 +184,11 @@ const Home = (props) => {
             </div>
           </Carousel>
         </div>
+      </div>
+      <div className="fixed rounded-lg shadow-md bg-slate-50 p-2 bottom-3 right-4 cursor-pointer">
+        <a href="https://wa.me/message/KJTPLUM6MFBXG1">
+          <FaWhatsapp size={32} />
+        </a>
       </div>
     </Layout>
   );
