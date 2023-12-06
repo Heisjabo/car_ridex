@@ -56,7 +56,7 @@ const Cards = ({cars}) => {
                     <div className='w-[40px] h-[40px] flex items-center justify-center bg-blue-200 sm:py-3 md:py-2 lg:py-4 rounded-full'>
                       <FaHeart className='text-blue-400 font-normal' />
                     </div>
-                    <button className='lg:rounded-2xl rounded-lg px-2 py-2 md:rounded-xl sm:rounded-lg bg-blue-400 lg:px-7 md:px-3 sm:px-3 sm:py-2 md:py-1 lg:py-2 font-semibold text-white'>
+                    <button className='lg:rounded-xl rounded-lg px-2 py-2 md:rounded-xl sm:rounded-lg bg-blue-400 lg:px-7 md:px-3 sm:px-3 sm:py-2 md:py-1 lg:py-2 font-semibold text-white'>
                     <Link to={`/${item._id}`}>{location.pathname == '/rent' ? 'Rent now' : 'Buy now'}</Link>
                     </button>
                   </div>

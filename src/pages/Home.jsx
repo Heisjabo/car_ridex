@@ -10,6 +10,8 @@ import Blog3 from "../assets/Images/blog-3.jpg";
 import Blog4 from "../assets/Images/blog-4.jpg";
 import Blog5 from "../assets/Images/blog-5.jpg";
 import Cards from "../components/Cards.jsx";
+import Nav from "../components/Nav.jsx";
+import Footer from "../components/Footer.jsx";
 import { FiChevronDown } from 'react-icons/fi';
 import { AppContext } from "../context/AppProvider.jsx";
 
@@ -36,7 +38,7 @@ const Home = (props) => {
     },
   };
   return (
-    <Layout className="relative">
+    <Layout>
       <div className="home h-[90vh] bg-cover bg-center relative flex items-center justify-center">
         <div className="bg-opacity-60 bg-black absolute inset-0"></div>
         <div className="text-slate-200 flex flex-col items-center text-center relative z-10 gap-6">
@@ -55,11 +57,11 @@ const Home = (props) => {
       </div>
 
       <div className="px-[7%]">
-        <div className="flex justify-between mt-10">
-          <h1 className="text-4xl text-slate-950">Featured cars</h1>
-          <div className="flex gap-3">
-            <button className="text-xl -mt-6">View more</button>
-            <AiOutlineArrowRight className="text-blue-400 text-xl" />
+        <div className="flex justify-between mt-10 items-center">
+          <h1 className="text-xl md:text-2xl lg:text-3xl text-slate-900">Featured cars</h1>
+          <div className="flex gap-2 items-center">
+            <button className="text-lg md:text-xl border-none outline-none">view more</button>
+            <AiOutlineArrowRight className="text-blue-400 text-xl mt-1" />
           </div>
         </div>
         <Cards cars={cars}/>
@@ -186,7 +188,7 @@ const Home = (props) => {
         </div>
       </div>
       <div className="fixed rounded-lg shadow-md bg-slate-50 p-2 bottom-3 right-4 cursor-pointer">
-        <a href="https://wa.me/message/KJTPLUM6MFBXG1">
+        <a href="https://wa.me/message/KJTPLUM6MFBXG1" target="_blank">
           <FaWhatsapp size={32} />
         </a>
       </div>

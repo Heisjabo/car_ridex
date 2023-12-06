@@ -5,11 +5,11 @@ import { FaFacebook, FaInstagram, FaTwitter, FaSkype } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5';
 const Footer = () => {
     return (
-        <div className='bg-slate-300 px-[7%]'>
+        <div className='bg-slate-300 px-[7%] pt-4'>
             <div className='pt-[50px] flex flex-col md:flex-row gap-4 justify-start md:gap-[14%]'>
                 <div>
                     <h1 className=' font-semibold text-slate-900 text-3xl'>Ridex</h1>
-                    <h1 className='mt-[20px] text-gray-500 font-normal'>Search for cheap rental cars in New York.<br></br> With a diverse fleet of 19,000 vehicles,<br></br> Waydex offers its consumers an attractive<br></br> and fun selection.</h1>
+                    <h1 className='mt-[20px] text-gray-500 font-normal'>Search for cheap rental cars in Rwanda.<br></br> With a diverse fleet of 19,000 vehicles,<br></br> ridex offers its consumers an attractive<br></br> and fun selection.</h1>
                 </div>
                 <div className=' grid gap-2 text-slate-900 font-normal'>
                     <h1 className='text-slate-700 font-semibold'>Company</h1>
