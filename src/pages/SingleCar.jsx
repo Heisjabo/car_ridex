@@ -138,11 +138,11 @@ const SingleCar = () => {
         <div className="rounded-xl py-4 w-full md:w-[50%] relative flex-start flex flex-col mt-4">
         <h2 className="font-bold text-xl text-slate-700">Place Your Order</h2>
           <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <input
                 type="text"
                 name="name"
-                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-blue-800"
+                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-slate-800"
                 placeholder="Enter your name"
                 {...register("name")}
               />
@@ -151,7 +151,7 @@ const SingleCar = () => {
               <input
                 type="email"
                 name="email"
-                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-blue-800"
+                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-slate-800"
                 placeholder="Enter your email"
                 {...register("email")}
               />
@@ -160,7 +160,7 @@ const SingleCar = () => {
               <input
                 type="tel"
                 name="phone"
-                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-blue-800"
+                className="border border-blue-800 px-3 py-2 w-full rounded bg-transparent focus:outline-none placeholder-slate-800"
                 placeholder="Phone"
                 {...register("phone")}
               />
@@ -190,7 +190,7 @@ const SingleCar = () => {
               className="bg-slate-800 text-white rounded-lg px-4 py-2 text-xl hover:bg-slate-900"
             >
               Submit
-            </button>
+            </button> */}
           </form>
         </div>
         </section>

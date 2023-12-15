@@ -11,6 +11,7 @@ import SinglePart from './pages/SinglePart';
 import SmoothScroll from "./helpers/SmoothScroll";
 import Index from "./dashboard/index";
 import SingleCar  from './pages/SingleCar.jsx';
+import { LoginForm } from './components/LoginForm.jsx';
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
         <Route path='/spare-parts' element={<SpareParts />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/:carId" element={<SingleCar />}></Route>
+        <Route path='/login' element={<LoginForm />}></Route>
         <Route path='/dashboard' element={<Index />}></Route>
           <Route path="dashboard/cars" element={<DashboardCars />}/>
         <Route path="/carsales" element={<Carsales />}></Route>

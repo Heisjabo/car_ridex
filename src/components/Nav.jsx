@@ -11,19 +11,27 @@ const Navbar = () => {
   };
 
   const changeNavColor = () => {
-    if(window.scrollY >= 80){
-        setColorChange(true);
+    if (window.scrollY >= 80) {
+      setColorChange(true);
     } else {
-        setColorChange(false);
+      setColorChange(false);
     }
-  }
-    window.addEventListener("scroll", changeNavColor);
+  };
+  window.addEventListener("scroll", changeNavColor);
 
   return (
     <nav className="fixed top-0 z-[100] w-screen">
-      <div className={`${colorChange ? "bg-slate-200 text-slate-700 shadow-lg" : " bg-slate-100 text-gray-500"} flex justify-between items-center px-8 md:px-24 p-6 text-sm font-bold`}>
+      <div
+        className={`${
+          colorChange
+            ? "bg-slate-200 text-slate-700 shadow-lg"
+            : " bg-slate-100 text-gray-500"
+        } flex justify-between items-center px-8 md:px-24 p-6 text-sm font-bold`}
+      >
         <div>
-          <Link to="/"><h1 className="text-xl">CAR RIDEX</h1></Link>
+          <Link to="/">
+            <h1 className="text-xl">CAR RIDEX</h1>
+          </Link>
         </div>
         <div className="hidden lg:inline ">
           <ul className="flex justify-center hover:cursor-pointer">
@@ -39,15 +47,12 @@ const Navbar = () => {
             <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
               <Link to="/contact">Contact</Link>
             </li>
-            
           </ul>
         </div>
 
         <div className="hidden lg:inline">
           <ul className="flex justify-center hover:cursor-pointer">
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              Login
-            </li>
+            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Login</li>
             <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
               Sign up
             </li>
@@ -69,36 +74,36 @@ const Navbar = () => {
               : "fixed right-[-100%] bg-white"
           }
         >
-          <div className="flex justify-end pr-8 pt-8">
+          <div className="flex justify-end pr-8 py-8">
             <TfiClose
               onClick={handleNav}
               className="rounded p-1 hover:black/5 hover:cursor-pointer"
               size={24}
             />
           </div>
-          <div className=" flex flex-col justify-between h-[80px]">
-          <ul className="pt-8 px-6">
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              <Link to="/rent">Car Rent</Link>
-            </li>
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              <Link to="/carsales">Car Sales</Link>
-            </li>
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-          <ul className="flex justify-center flex-col hover:cursor-pointer">
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              Login
-            </li>
-            <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-              Sign up
-            </li>
-          </ul>
+          <div className=" flex flex-col justify-between h-[80vh] pt-8 px-6">
+            <ul className="">
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+                <Link to="/rent">Car Rent</Link>
+              </li>
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+                <Link to="/carsales">Car Sales</Link>
+              </li>
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+            <ul className="flex justify-center flex-col hover:cursor-pointer gap-2">
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+                <Link to="/login">Login</Link>
+              </li>
+              <li className="py-1 px-3 hover:rounded hover:bg-black/5 text-white rounded bg-slate-700">
+                Sign up
+              </li>
+            </ul>
           </div>
         </div>
       </div>
